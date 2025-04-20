@@ -15,7 +15,7 @@ interface JobProps {
 
 const Job: React.FC<JobProps> = ({ jobExperience, _className }) => {
     return (
-        <div className={`flex border-t border-gray-200 ${_className}`}>
+        <div className={`flex border-t sm:border-gray-200 flex-col sm:flex-row border-b-2 border-gray-500 sm:border-0  ${_className}`}>
             {/* Левая колонка */}
             <div className="flex-1 p-3.5 flex flex-col justify-between min-h-full">
                 {jobExperience ? (
@@ -38,7 +38,7 @@ const Job: React.FC<JobProps> = ({ jobExperience, _className }) => {
             </div>
 
             {/* Правая колонка */}
-            <div className="w-48 p-3.5 flex flex-col justify-between min-h-full bg-gray-100 ">
+            <div className="w-full sm:w-48 p-3.5 flex flex-col justify-between min-h-full bg-gray-100 ">
                 {jobExperience ? (
                     <div className="flex flex-wrap items-start gap-2">
                         {jobExperience.tech.map((tech, idx) => (
