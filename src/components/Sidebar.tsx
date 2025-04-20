@@ -27,7 +27,7 @@ const Sidebar = () => {
                     Frontend Developer / Team Lead
                 </span>
             </div>
-            <div className="_header_part_sidebar  sm:w-60 h-56 overflow-hidden">
+            <div className="_header_part_sidebar  sm:w-60 h-56 aspect-square overflow-hidden">
                 <img src={avatar} alt="Gregory Iakovlev" className="w-full h-full object-cover"/>
             </div>
             <Liner text={"SUMMARY"} _className="px-3.5 bg-gray-600 mb-5"/>
@@ -40,7 +40,7 @@ const Sidebar = () => {
             <ContentBlok items={content.languages} title={"Languages"} _className="mb-9"/>
             <ContentBlok items={content.interests} title={"Interests"} _className="mb-9"/>
             <Liner text={"Contacts"} _className="px-3.5 bg-gray-600 mb-5"/>
-            <Contacts _className="px-3.5 bg-gray-500 mb-32"/>
+            <Contacts _className="px-3.5 bg-gray-500 mb-9 flex-grow"/>
         </div>
     )
 }

@@ -7,12 +7,12 @@ const content = {
             description: "Independent and persistent in achieving results. Able to quickly adapt to new information and make well-reasoned decisions even when information is lacking."
         },
         {
-            title: "Motivating",
-            description: "Led teams of up to 15 members with clear communication and consensus-driven development. Inspired friends to join startups"
+            title: "Communicative",
+            description: "Easily build working with different people. Experienced in holding sessions with clients to identify and clarify business requirements."
         },
         {
-            title: "Adaptable",
-            description: "Quickly learn new tools and technologies to achieve results across diverse domains."
+            title: "Team Lead",
+            description: "Led development teams and prepared technical specifications based on business requirements."
         },
     ],
     topics: [
@@ -24,8 +24,8 @@ const content = {
         'Requirements Analysis',
     ],
     languages: [
-        'English-B1',
-        'Russian-Native',
+        'English - B1',
+        'Russian - Native',
     ],
     interests: [
         'Ice Hockey',
@@ -88,17 +88,6 @@ const content = {
         }
     ],
     education: [
-
-        {
-            title: "React Developer",
-            company: "Yandex-Practicum",
-            years: "2023",
-            tech: ["Frontend-Developer"],
-            tools: ["TypeScript", "React"],
-            responsibilities: [
-                "Completed a 6-month intensive course in Frontend Development",
-            ]
-        },
         {
             title: "Engineer",
             company: "St Petersburg State University of Architecture and Civil" +
