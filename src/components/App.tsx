@@ -1,12 +1,13 @@
-import Main from "./Main.tsx";
-import Sidebar from "./Sidebar.tsx";
+import PartFirst from "./parts/PartFirst.tsx";
+import PartSecond from "./parts/PartSecond.tsx";
+
 
 function App() {
 
     return (
-        <div className="_app flex items-start flex-col sm:flex-row h-[1700px] max-w-[1100px] mx-auto ">
-            <Sidebar/>
-            <Main/>
+        <div className="_App leading-relaxed   justify-center  min-h-screen w-full grid-rows-2 grid-cols-2">
+            <PartFirst/>
+            <PartSecond/>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {content} from "../lib/content.tsx";
+import {content} from "../../lib/content.tsx";
 
 interface ContactsProps {
     _className?: string;

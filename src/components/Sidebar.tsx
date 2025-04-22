@@ -1,32 +1,13 @@
 import avatar from "../assets/iam2.png";
-import Liner from "./Liner.tsx";
+import Liner from "./common/Liner.tsx";
 import {content} from "../lib/content.tsx";
-import Trait from "./Trait.tsx";
-import BulletList from "./BulletList.tsx";
-import Contacts from "./Contacts.tsx";
-
-
-const ContentBlok = (props: { items: string[], title: string, _className: string; }) => {
-    return (
-        <div className={props._className || ''}>
-            <Liner text={props.title} _className="px-3.5 bg-gray-600 mb-3"/>
-            <BulletList items={props.items} _className="px-3.5 mb-3"/>
-        </div>
-
-    )
-}
+import Trait from "./common/Trait.tsx";
+import Contacts from "./common/Contacts.tsx";
+import ContentBlok from "./common/ContentBlok.tsx";
 
 const Sidebar = () => {
     return (
-        <div className="_sidebar  flex flex-col h-full sm:max-w-60 bg-gray-500 mb-9 sm:mb-0">
-            <div
-                className="_header flex flex-col sm:flex-row sm:justify-start sm:items-end  sm:hidden w-full text-gray-100 h-fit text-2xl uppercase px-4 py-7">
-
-                Gregory Iakovlev
-                <span className="font-light text-xs normal-case">
-                    Frontend Developer / Team Lead
-                </span>
-            </div>
+        <div className="_sidebar  flex print:hidden flex-col min-h-screen w-60 z-10 bg-gray-500 mb-0">
             <div className="_header_part_sidebar  sm:w-60 h-56 aspect-square overflow-hidden">
                 <img src={avatar} alt="Gregory Iakovlev" className="w-full h-full object-cover"/>
             </div>
@@ -36,11 +17,11 @@ const Sidebar = () => {
                     <Trait key={index} title={trait.title} _className="px-3.5 mb-2" description={trait.description}/>
                 ))}
             </div>
-            <ContentBlok items={content.topics} title={"Domains of expertise"} _className="mb-9"/>
-            <ContentBlok items={content.languages} title={"Languages"} _className="mb-9"/>
-            <ContentBlok items={content.interests} title={"Interests"} _className="mb-9"/>
+            <ContentBlok items={content.topics} title={"Domains of expertise"} _className="mb-9 break-after-page break-inside-avoid"/>
+            <ContentBlok items={content.languages} title={"Languages"} _className="mb-9 break-inside-avoid"/>
+            <ContentBlok items={content.interests} title={"Interests"} _className="mb-9 break-inside-avoid"/>
             <Liner text={"Contacts"} _className="px-3.5 bg-gray-600 mb-5"/>
-            <Contacts _className="px-3.5 bg-gray-500 mb-9 flex-grow"/>
+            <Contacts _className="px-3.5 bg-gray-500 mb-9 flex-grow "/>
         </div>
     )
 }
