@@ -3,7 +3,7 @@ import Liner from "./common/Liner.tsx";
 import {content} from "../lib/content.tsx";
 import Trait from "./common/Trait.tsx";
 import Contacts from "./common/Contacts.tsx";
-import ContentBlok from "./common/ContentBlok.tsx";
+import ContentBlock from "./common/ContentBlock.tsx";
 
 const Sidebar = () => {
     return (
@@ -17,9 +17,9 @@ const Sidebar = () => {
                     <Trait key={index} title={trait.title} _className="px-3.5 mb-2" description={trait.description}/>
                 ))}
             </div>
-            <ContentBlok items={content.topics} title={"Domains of expertise"} _className="mb-9 break-after-page break-inside-avoid"/>
-            <ContentBlok items={content.languages} title={"Languages"} _className="mb-9 break-inside-avoid"/>
-            <ContentBlok items={content.interests} title={"Interests"} _className="mb-9 break-inside-avoid"/>
+            <ContentBlock items={content.topics} title={"Domains of expertise"} _className="mb-9 break-after-page break-inside-avoid"/>
+            <ContentBlock items={content.languages} title={"Languages"} _className="mb-9 break-inside-avoid"/>
+            <ContentBlock items={content.interests} title={"Interests"} _className="mb-9 break-inside-avoid"/>
             <Liner text={"Contacts"} _className="px-3.5 bg-gray-600 mb-5"/>
             <Contacts _className="px-3.5 bg-gray-500 mb-9 flex-grow "/>
         </div>

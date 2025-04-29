@@ -9,9 +9,13 @@ interface TraitProps {
 
 const Trait: React.FC<TraitProps> = ({title, description,_className}) => {
     return (
-        <div className={_className || ''}>
-            <div className={`text-gray-100 text-[16px] font-semibold py-1.5`}> {title}</div>
-            <div className={`text-gray-100 text-[15px] font-light py-1.5`}> {description}</div>
+        <div className={`${_className}`}>
+            <div className="text-gray-100 text-base font-bold
+            print:text-lg
+            "> {title}</div>
+            <div className="text-gray-100 text-sm font-light leading-relaxed py-1.5
+            print:text-base print:mb-3
+            "> {description}</div>
         </div>
     )
 }

@@ -16,18 +16,28 @@ interface JobProps {
 const Job: React.FC<JobProps> = ({jobExperience, _className}) => {
     return (
         <div
-            className={`flex border-t break-inside-avoid border-gray-300 flex-row flex-wrap border-b-1 w-full  ${_className}`}>
+            className={`flex border-t break-inside-avoid border-gray-300 flex-row flex-wrap border-b-1 w-full
+            ${_className}`}>
             {/* Левая колонка */}
-            <div className="flex-1 p-3.5 flex flex-col justify-between min-h-full">
+            <div className="flex-1 p-3.5 flex flex-col justify-between
+            ">
                 {jobExperience ? (
-                    <div className="mb-7 ">
-                        <p className="text-lg font-medium text-gray-800">{jobExperience.title}</p>
-                        <p className="text-gray-600">{jobExperience.company}</p>
-                        <p className="text-sm text-gray-400 flex items-center gap-2">
+                    <div className="mb-7">
+                        <p className="text-lg font-medium text-gray-800
+                        print:text-xl print:mb-2
+                        ">{jobExperience.title}</p>
+                        <p className="text-gray-600
+                        print:text-base print:mb-5
+                        ">{jobExperience.company}</p>
+                        <p className="text-sm text-gray-400 flex items-center gap-2
+                        print:text-base print:mb-5
+                        ">
                             <BiCalendar/>
                             {jobExperience.years}
                         </p>
-                        <ul className="mt-2 pl-5  list-disc list-outside text-sm font-light text-gray-700 space-y-1">
+                        <ul className="mt-2 pl-5  list-disc list-outside text-sm font-light text-gray-700 space-y-1
+
+                        ">
                             {jobExperience.responsibilities.map((item, idx) => (
                                 <li key={idx}>{item}</li>
                             ))}
@@ -39,25 +49,34 @@ const Job: React.FC<JobProps> = ({jobExperience, _className}) => {
             </div>
 
             {/* Правая колонка */}
-            <div className="w-48 p-3.5 flex flex-col justify-start min-h-full bg-gray-100 ">
+            <div className="w-1/4 p-3.5 flex flex-col justify-start min-h-full bg-gray-100
+            print:w-1/3
+             ">
                 {jobExperience ? (
-                    <div className="flex flex-col flex-wrap justify-start items-start gap-3">
-                        <div className="flex flex-wrap items-start gap-2">
+                    <div className="flex flex-col flex-wrap justify-start items-start gap-3
+
+                    ">
+                        <div className="flex flex-wrap items-start gap-2
+
+                        ">
                             {jobExperience.tech.map((tech, idx) => (
                                 <div
                                     key={idx}
-                                    className="text-xs px-2 py-1 rounded bg-gray-400 text-white inline"
-                                >
+                                    className="text-xs px-2 py-1 rounded bg-gray-400 text-white inline
+
+                                     ">
                                     {tech}
                                 </div>
                             ))}
                         </div>
-                        <div className="flex flex-wrap print:flex print:flex-wrap items-start gap-2 print:pr-3">
+                        <div className="flex flex-wrap print:flex print:flex-wrap items-start gap-2
+                        ">
                             {jobExperience.tools.map((tool, idx) => (
                                 <span
                                     key={idx}
-                                    className="text-xs px-2 py-1 rounded border bg-white border-gray-400 text-gray-500 inline"
-                                >
+                                    className="text-xs px-3 py-1 rounded border bg-white border-gray-400 text-gray-500 inline
+
+                                    ">
                                 {tool}
                             </span>
                             ))}

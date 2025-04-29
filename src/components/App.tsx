@@ -5,7 +5,9 @@ import PartSecond from "./parts/PartSecond.tsx";
 function App() {
 
     return (
-        <div className="_App leading-relaxed   justify-center  min-h-screen w-full grid-rows-2 grid-cols-2">
+        <div className="_App leading-relaxed grid grid-rows-[auto_1fr] w-[1100px] mx-auto
+        print:w-full
+        ">
             <PartFirst/>
             <PartSecond/>
         </div>
