@@ -10,11 +10,10 @@ interface PartFirstProps {
 }
 
 const PartFirst = ({_className}: PartFirstProps) => {
-    console.log("PartFirst", _className);
     return (
-        <div className="_part1 grid justify-center relative grid-cols-[22%_78%]
-        print:grid-cols-[30%_70%] print:min-h-screen
-        ">
+        <div className={`${_className} _part1 hidden md:grid justify-center relative grid-cols-[22%_78%]
+        print:grid-cols-[30%_70%] print:min-h-screen print:grid
+        `}>
             <div className="_sidebar flex flex-col w-full z-10 bg-gray-500
             ">
                 <div className="_header_part_sidebar w-full aspect-square overflow-hidden

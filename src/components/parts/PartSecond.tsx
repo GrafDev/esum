@@ -4,13 +4,17 @@ import Contacts from "../common/Contacts.tsx";
 import Job from "../common/Job.tsx";
 import ContentBlock from "../common/ContentBlock.tsx";
 
-const PartSecond = () => {
+interface PartSecondProps {
+    _className?: string;
+}
+
+const PartSecond = ({_className}: PartSecondProps) => {
     return (
 
         <div
-            className="_part2 grid justify-center relative h-full items-start break-inside-avoid grid-cols-[22%_78%]
-        print:grid-cols-[30%_70%] print:min-h-screen
-        ">
+            className={`${_className} _part2 hidden md:grid justify-center relative h-full items-start break-inside-avoid grid-cols-[22%_78%]
+        print:grid-cols-[30%_70%] print:min-h-screen print:grid
+`}>
             <div className="_sidebar flex flex-col w-full h-full z-10 bg-gray-500
             ">
                     <ContentBlock items={content.languages} title={"Languages"}

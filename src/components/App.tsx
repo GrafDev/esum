@@ -8,7 +8,7 @@ function App() {
         <div className="_App leading-relaxed grid grid-rows-[auto_1fr] w-[1100px] mx-auto
         print:w-full
         ">
-            <PartFirst/>
+            <PartFirst />
             <PartSecond/>
         </div>
     )
