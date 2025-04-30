@@ -1,9 +1,9 @@
-import avatar from "../../assets/iam2.png";
-import Liner from "../common/Liner.tsx";
-import {content} from "../../lib/content.tsx";
-import Trait from "../common/Trait.tsx";
-import Job from "../common/Job.tsx";
-import ContentBlock from "../common/ContentBlock.tsx";
+import avatar from "../assets/iam2.png";
+import Liner from "./common/Liner.tsx";
+import {content} from "../lib/content.tsx";
+import Trait from "./common/Trait.tsx";
+import Job from "./common/Job.tsx";
+import ContentBlock from "./common/ContentBlock.tsx";
 
 interface PartFirstProps {
     _className?: string;
@@ -11,20 +11,33 @@ interface PartFirstProps {
 
 const PartFirst = ({_className}: PartFirstProps) => {
     return (
-        <div className={`${_className} _part1 hidden md:grid justify-center relative grid-cols-[22%_78%]
-        print:grid-cols-[30%_70%] print:min-h-screen print:grid
+        <div className={`${_className} _part1 flex flex-col  relative
+        md:grid md:grid-cols-[22%_78%] md:justify-center
+        print:grid print:grid-cols-[30%_70%] print:min-h-screen 
         `}>
             <div className="_sidebar flex flex-col w-full z-10 bg-gray-500
             ">
-                <div className="_header_part_sidebar w-full aspect-square overflow-hidden
+                <div className="_header_part_sidebar flex flex-row h-32
+                md:aspect-square md:block md:h-auto
+                print:w-full print:aspect-square print:block print:h-auto
                 ">
-                    <img src={avatar} alt="Gregory Iakovlev" className="h-full  object-cover"/>
+                    <img src={avatar} alt="Gregory Iakovlev" className="h-full w-1/2 object-cover
+                    md:w-full
+                    print:w-full
+                    "/>
+                    <div
+                        className="_header bg-white text-2xl uppercase px-4 py-7 w-full flex justify-start items-end
+                        md:hidden
+                        print:hidden
+                    ">
+                        Gregory Iakovlev
+                    </div>
                 </div>
                 <Liner text={"SUMMARY"} _className="px-3.5 bg-gray-600 mb-5"/>
                 <div className="flex flex-col justify-start items-start w-full h-fit mb-9
                 print:break-inside-avoid
                 ">
-                    {content.traits.map((trait, index) => (
+                {content.traits.map((trait, index) => (
                         <Trait key={index} title={trait.title} _className="px-3.5 mb-2"
                                description={trait.description}/>
                     ))}
@@ -39,8 +52,9 @@ const PartFirst = ({_className}: PartFirstProps) => {
             print:break-inside-avoid
             ">
                 <div
-                    className="_header justify-start items-end z-20 bg-white flex w-full text-2xl  uppercase px-4 py-7
-                    print:text-3xl
+                    className="_header justify-start items-end z-20 bg-white hidden w-full text-2xl  uppercase px-4 py-7
+                    md:flex
+                    print:text-3xl print:flex
                     ">
                     Gregory Iakovlev
                 </div>

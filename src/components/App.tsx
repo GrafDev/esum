@@ -1,11 +1,12 @@
-import PartFirst from "./parts/PartFirst.tsx";
-import PartSecond from "./parts/PartSecond.tsx";
+import PartFirst from "./PartFirst.tsx";
+import PartSecond from "./PartSecond.tsx";
 
 
 function App() {
 
     return (
-        <div className="_App leading-relaxed grid grid-rows-[auto_1fr] w-[1100px] mx-auto
+        <div className="_App leading-relaxed w-full grid grid-rows-[auto_1fr] mx-auto
+        md:w-[1100px]
         print:w-full
         ">
             <PartFirst />

@@ -19,7 +19,9 @@ const Job: React.FC<JobProps> = ({jobExperience, _className}) => {
             className={`flex border-t break-inside-avoid border-gray-300 flex-row flex-wrap border-b-1 w-full
             ${_className}`}>
             {/* Левая колонка */}
-            <div className="flex-1 p-3.5 flex flex-col justify-between
+            <div className="flex-1 p-2.5 flex flex-col justify-between
+            md:p-3.5
+            print:p-3.5
             ">
                 {jobExperience ? (
                     <div className="mb-7">
@@ -49,8 +51,9 @@ const Job: React.FC<JobProps> = ({jobExperience, _className}) => {
             </div>
 
             {/* Правая колонка */}
-            <div className="w-1/4 p-3.5 flex flex-col justify-start min-h-full bg-gray-100
-            print:w-1/3
+            <div className="w-1/3 p-2.5 flex flex-col justify-start min-h-full bg-gray-100
+            md:w-1/4 md:p-3.5
+            print:w-1/3 print:p-3.5
              ">
                 {jobExperience ? (
                     <div className="flex flex-col flex-wrap justify-start items-start gap-3
@@ -63,7 +66,6 @@ const Job: React.FC<JobProps> = ({jobExperience, _className}) => {
                                 <div
                                     key={idx}
                                     className="text-xs px-2 py-1 rounded bg-gray-400 text-white inline
-
                                      ">
                                     {tech}
                                 </div>
