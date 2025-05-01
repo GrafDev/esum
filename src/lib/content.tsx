@@ -1,4 +1,4 @@
-import { FaMapMarkerAlt, FaGlobe, FaTelegramPlane, FaLinkedin, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
+import {FaGlobe, FaTelegramPlane, FaLinkedin, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 
 const content = {
     traits: [
@@ -8,7 +8,7 @@ const content = {
         },
         {
             title: "Communicative",
-            description: "Easily build working with different people. Experienced in holding sessions with clients to identify and clarify business requirements."
+            description: "Easily build effective working relationships with different people. Experienced in conducting sessions with clients to identify and clarify business requirements."
         },
         {
             title: "Team Lead",
@@ -30,16 +30,13 @@ const content = {
     interests: [
         'Ice Hockey',
         'Table Tennis',
-        'Brain Teasers',
     ],
     contacts : [
-        { icon: <FaMapMarkerAlt />, label: 'Serbia' },
-        { icon: <FaGlobe />, label: 'Russia' },
-        { icon: <FaTelegramPlane />, label: 'GregoryYakovlev' },
-        { icon: <FaLinkedin />, label: 'Gregory Iakovelv' },
+        { icon: <FaGlobe />, label: 'Serbia' },
+        { icon: <FaTelegramPlane />, label: '@GregoryYakovlev' },
+        { icon: <FaLinkedin />, label: 'www.linkedin.com/in/gregory-iakovlev-graf-dev' },
         { icon: <FaWhatsapp />, label: '+381 628 495 479' },
         { icon: <FaEnvelope />, label: 'gregory.yakovlev@gmail.com' },
-        { icon: <FaGlobe />, label: 'greg-yakovlev.web.app' },
     ],
     jobs: [
         {
@@ -85,7 +82,25 @@ const content = {
                 "Built a system to control and validate BIM model parameters.",
                 "Reduced documentation processing time by 2.5 times through integration with business processes"
             ]
+        },
+        {
+            title: "Architect / Civil Engineer / BIM Lead",
+            company: "Architectural & Technical Leadership",
+            years: "2001 – 2020",
+            tech: ["Architecture", "Civil Engineering", "BIM-Management"],
+            tools: [ "Python", "Lisp", "Dynamo","Revit", "AutoCAD", ],
+            responsibilities: [
+                "Led multidisciplinary teams of architects, engineers, and contractors",
+                "Ensured compliance with building codes and standards (ISO)",
+                "Coordinated all project stages from concept to delivery",
+                "Supervised quality and accuracy of design documentation",
+                "Managed BIM workflows and model coordination in Revit",
+                "Oversaw project approvals and coordination with regulatory bodies, clients, and investors",
+                "Taught BIM Management course at ITMO University",
+                "Developed and delivered a Dynamo (Python) course for Revit engineers"
+            ]
         }
+
     ],
     education: [
         {

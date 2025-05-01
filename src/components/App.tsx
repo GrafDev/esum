@@ -9,7 +9,7 @@ function App() {
         md:w-[1100px]
         print:w-full
         ">
-            <PartFirst />
+            <PartFirst/>
             <PartSecond/>
         </div>
     )

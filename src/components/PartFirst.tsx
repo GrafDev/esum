@@ -59,9 +59,10 @@ const PartFirst = ({_className}: PartFirstProps) => {
                     Gregory Iakovlev
                 </div>
                 <Liner text={"Work Experience"} _className="px-3.5 bg-gray-400 z-10 "/>
-                <Job jobExperience={content.jobs[0]} _className={"z-10"}/>
-                <Job jobExperience={content.jobs[1]} _className={"z-10 print:h-full"}/>
+                <Job jobExperience={content.jobs[0]} _className={"z-10 border-t-0"}/>
+                <Job jobExperience={content.jobs[1]} _className={"z-10 print:h-full "}/>
                 <Job jobExperience={content.jobs[2]} _className={"z-10 h-full print:hidden"}/>
+                <Job jobExperience={content.jobs[3]} _className={"z-10 h-full print:hidden"}/>
             </div>
         </div>
     )

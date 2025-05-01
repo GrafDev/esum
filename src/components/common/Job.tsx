@@ -16,28 +16,31 @@ interface JobProps {
 const Job: React.FC<JobProps> = ({jobExperience, _className}) => {
     return (
         <div
-            className={`flex border-t break-inside-avoid border-gray-300 flex-row flex-wrap border-b-1 w-full
-            ${_className}`}>
+            className={`${jobExperience ? "flex" : "hidden"} break-inside-avoid border-t border-gray-300 flex-row flex-wrap  w-full
+            ${_className} `}>
             {/* Левая колонка */}
-            <div className="flex-1 p-2.5 flex flex-col justify-between
-            md:p-3.5
-            print:p-3.5
+            <div className="flex-1 p-2.5 flex flex-col border-l-2 justify-between border-gray-400
+            md:p-3.5 md:border-0
+            print:p-2.5 print:border-0 print:mb-0
             ">
                 {jobExperience ? (
-                    <div className="mb-7">
+                    <div className="mb-7
+                    print:mb-3
+                    ">
                         <p className="text-lg font-medium text-gray-800
-                        print:text-xl print:mb-2
+                        print:text-xl print:mb-1
                         ">{jobExperience.title}</p>
                         <p className="text-gray-600
-                        print:text-base print:mb-5
+                        print:text-base print:mb-4
                         ">{jobExperience.company}</p>
                         <p className="text-sm text-gray-400 flex items-center gap-2
-                        print:text-base print:mb-5
+                        print:text-base print:mb-3
                         ">
                             <BiCalendar/>
                             {jobExperience.years}
                         </p>
-                        <ul className="mt-2 pl-5  list-disc list-outside text-sm font-light text-gray-700 space-y-1
+                        <ul className="mt-1 pl-5  list-disc list-outside leading-relaxed text-sm font-light text-gray-700 space-y-1
+                        print:space-y-0
 
                         ">
                             {jobExperience.responsibilities.map((item, idx) => (
@@ -51,9 +54,9 @@ const Job: React.FC<JobProps> = ({jobExperience, _className}) => {
             </div>
 
             {/* Правая колонка */}
-            <div className="w-1/3 p-2.5 flex flex-col justify-start min-h-full bg-gray-100
-            md:w-1/4 md:p-3.5
-            print:w-1/3 print:p-3.5
+            <div className="w-1/3 p-2.5 flex flex-col justify-start min-h-full bg-gray-100 border-gray-400 border-r-2
+            md:w-1/4 md:p-3.5 md:border-r-0
+            print:w-[28%] print:p-3.5 print:border-r-0
              ">
                 {jobExperience ? (
                     <div className="flex flex-col flex-wrap justify-start items-start gap-3
